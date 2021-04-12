@@ -1,0 +1,39 @@
+
+ <section class="portfolio section" id="portfolio">
+    <div class="container">
+       <div class="row">
+           <div class="section-title padd-15">
+              <h2>Portfolio</h2>
+           </div>
+       </div>
+       <div class="row">
+         <div class="portfolio-filter padd-15">
+            <button type="button" class="active" data-filter="all">All</button>
+            <!-- <button type="button" data-filter="web-design">Web Design</button>
+            <button type="button" data-filter="photography">Photography</button>
+            <button type="button" data-filter="wordpress">Wordpress</button> -->
+         </div>
+     </div>
+       <div class="row">
+         
+          {% for p in portfolio %}
+          <div class="portfolio-item padd-15">
+             <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                   <img src="{{ p.project_photo.url }}" alt="portfolio">
+                </div>
+                <div class="portfolio-info">
+                   <h4>{{ p.project_name }}</h4>
+                   
+                </div>
+             </div>
+             <a href="{{ p.project_link }}" target="_blank" class="btn_portfolio">click</a>
+          </div>
+          {% empty %}
+          <p style="text-align: center; color: red;">Not add yet Now </p>
+          {% endfor %}
+         
+       </div>
+
+    </div>
+   </section> 

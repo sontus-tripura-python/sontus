@@ -1,0 +1,144 @@
+
+<section class="about section" id="about">
+    <div class="container">
+       <div class="row">
+           <div class="section-title padd-15">
+              <h2>About Me</h2>
+           </div>
+       </div>
+       <div class="row">
+           <div class="about-content padd-15">
+               <div class="row">
+                  <div class="about-text padd-15">
+                     <h3>I'm {{ about.name }} <span> {{ about.position }}</span></h3>
+                     <p>{{ about.about_description }} </p>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="personal-info padd-15">
+                      <div class="row">
+                         <div class="info-item padd-15">
+                            <p>Birthday : <span>{{ about.birthday }}</span></p>
+                         </div>
+                         <div class="info-item padd-15">
+                            <p>Age : <span>{{ about.age }}</span></p>
+                         </div>
+                        
+                         <div class="info-item padd-15">
+                            <p>Email : <span class="email_address">{{ about.email }}</span></p>
+                         </div>
+                         <div class="info-item padd-15">
+                            <p>Degree : <span>{{ about.education_degree }}</span></p>
+                         </div>
+                        
+                         <div class="info-item padd-15">
+                            <p>City : <span>{{ about.city }}</span></p>
+                         </div>
+                         <div class="info-item padd-15">
+                            <p>Freelance : <span>{{ about.title }}</span></p>
+                         </div>
+                      </div>
+                      <div class="row">
+                         <div class="buttons padd-15">
+                            <a href="#" class="btn">Download CV</a>
+                            <a href="#contact" data-section-index="1" class="btn hire-me">Hire Me</a>
+                         </div>
+                      </div>
+                  </div>
+                  <div class="skills padd-15">
+                     <div class="row">
+                        <div class="skill-item padd-15">
+                          <h5>Javascript</h5>
+                          <div class="progress">
+                             <div class="progress-in" style="width: 80%"></div>
+                             <div class="skill-percent">80%</div>
+                          </div>
+                        </div>
+                        <div class="skill-item padd-15">
+                          <h5>Python</h5>
+                          <div class="progress">
+                             <div class="progress-in" style="width: 80%"></div>
+                             <div class="skill-percent">80%</div>
+                          </div>
+                        </div>
+                        <div class="skill-item padd-15">
+                          <h5>React</h5>
+                          <div class="progress">
+                             <div class="progress-in" style="width: 80%"></div>
+                             <div class="skill-percent">80%</div>
+                          </div>
+                        </div>
+                        <div class="skill-item padd-15">
+                          <h5>Django</h5>
+                          <div class="progress">
+                             <div class="progress-in" style="width: 85%"></div>
+                             <div class="skill-percent">85%</div>
+                          </div>
+                        </div>
+                        <div class="skill-item padd-15">
+                          <h5>Bootstrap</h5>
+                          <div class="progress">
+                             <div class="progress-in" style="width: 90%"></div>
+                             <div class="skill-percent">90%</div>
+                          </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="education padd-15">
+                    <h3 class="title">Education</h3>
+                    <div class="row">
+                      <div class="timeline-box padd-15">
+                        <div class="timeline shadow-dark">
+                          <!-- timeline Item -->
+                          {% for education in education_details %}
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h6 class="timeline-date">
+                             <i class="fa fa-calendar"></i>  {{ education.session }}
+                            </h6>
+                            <h4 class="timeline-title">{{ education.degree_name }} </h4>
+                            <p class="timeline-text">
+                            {{ education.description }}
+                            
+                          </p>
+                          </div>
+                          {% endfor %}
+                          <!-- timeline Item End -->
+                         
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="experience padd-15">
+                    <h3 class="title">Experience</h3>
+                    <div class="row">
+                      <div class="timeline-box padd-15">
+                        <div class="timeline shadow-dark">
+                          <!-- timeline Item -->
+                          {% for expert in exprience_details %}
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h6 class="timeline-date">
+                             <i class="fa fa-calendar"></i> {{ expert.session }}
+                            </h6>
+                            <h4 class="timeline-title">{{ expert.name }}</h4>
+                            <p class="timeline-text">
+                                {{ expert.description }}
+                             </p>
+                          </div>
+                          {% endfor %}
+                          <!-- timeline Item End -->
+                    
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+               </div>
+           </div>
+       </div>
+    </div>
+   </section>
